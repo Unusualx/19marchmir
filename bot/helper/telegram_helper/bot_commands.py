@@ -3,8 +3,8 @@ from bot import CMD_INDEX
 
 class _BotCommands:
     def __init__(self):
-        self.StartCommand = f'start{CMD_INDEX}'
-        self.MirrorCommand = f'mirror{CMD_INDEX}'
+        self.StartCommand = f'start'
+        self.MirrorCommand = f'miror{CMD_INDEX}'
         self.UnzipMirrorCommand = f'unzipmirror{CMD_INDEX}'
         self.ZipMirrorCommand = f'zipmirror{CMD_INDEX}'
         self.CancelMirror = f'cancel{CMD_INDEX}'
@@ -13,8 +13,8 @@ class _BotCommands:
         self.SearchCommand = f'search{CMD_INDEX}'
         self.StatusCommand = f'status{CMD_INDEX}'
         self.AuthorizedUsersCommand = f'users{CMD_INDEX}'
-        self.AuthorizeCommand = f'authorize{CMD_INDEX}'
-        self.UnAuthorizeCommand = f'unauthorize{CMD_INDEX}'
+        self.AuthorizeCommand = f'auth{CMD_INDEX}'
+        self.UnAuthorizeCommand = f'unauth{CMD_INDEX}'
         self.AddSudoCommand = f'addsudo{CMD_INDEX}'
         self.RmSudoCommand = f'rmsudo{CMD_INDEX}'
         self.PingCommand = f'ping{CMD_INDEX}'
