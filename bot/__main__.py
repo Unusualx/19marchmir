@@ -62,9 +62,7 @@ def start(update, context):
     uptime = get_readable_time((time.time() - botStartTime))
 
     start_string = f'''
-
 <b>I'm Awake Already🙂!</b>\n<b>Haven't Slept Since💤:</b> <code>{uptime}</code>
-
 '''
 
     buttons = button_build.ButtonMaker()
@@ -89,40 +87,7 @@ def start(update, context):
 
     else :
 
-        sendMessage(f"<b>Hey dear,</b>\n\n<b>If You Want To Use Me</b>\n\n<b>You Have To Ask @JaaiAli</b>\n\n<b><i>NOTE : All These Media/files Uploaded to Google Drive From Now on</i></b>", context.bot, update) 
-
-    uptime = get_readable_time((time.time() - botStartTime))
-
-    start_string = f'''
-
-<b>I'm Awake Already🙂!</b>\n<b>Haven't Slept Since💤:</b> <code>{uptime}</code>
-
-'''
-
-    buttons = button_build.ButtonMaker()
-
-    buttons.buildbutton("Owner X EAGLES NEST ⏤͟͞❤️", "t.me/jaaiali")
-
-    buttons.buildbutton("Support Channel ⏤͟͞🙋🏻‍♂️", "t.me/eaglesCloud")
-
-    reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
-
-    LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
-
-    if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-
-        if update.message.chat.type == "private" :
-
-            sendMessage(f"<b>Hey {update.message.chat.first_name}</b>,\n\nWelcome To One Of A EAGLE'S CLOUD Bot", context.bot, update)
-
-        else :
-
-            sendMarkup(start_string, context.bot, update, reply_markup)
-
-    else :
-
-        sendMessage(f"<b>Hey dear,</b>\n\n<b>If You Want To Use Me</b>\n\n<b>You Have To Ask @JaaiAli</b>\n\n<b><i>NOTE : All These Media/files Uploaded to Google Drive From Now on</i></b>", context.bot, update
-
+        sendMessage(f"<b>Hey dear,</b>\n\n<b>If You Want To Use Me</b>\n\n<b>You Have To Ask @JaaiAli</b>\n\n<b><i>NOTE : All These Media/files Uploaded to Google Drive From Now on</i></b>", context.bot, update)
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
     if Interval:
